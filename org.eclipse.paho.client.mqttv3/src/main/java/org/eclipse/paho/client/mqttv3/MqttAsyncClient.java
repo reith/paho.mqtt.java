@@ -1375,9 +1375,9 @@ public class MqttAsyncClient implements IMqttAsyncClient {
 		if (comms.isConnected()) {
 			throw ExceptionHelper.createMqttException(MqttException.REASON_CODE_CLIENT_CONNECTED);
 		}
-		if (comms.isConnecting()) {
-			throw new MqttException(MqttException.REASON_CODE_CONNECT_IN_PROGRESS);
-		}
+//		if (comms.isConnecting()) {
+//			throw new MqttException(MqttException.REASON_CODE_CONNECT_IN_PROGRESS);
+//		}
 		if (comms.isDisconnecting()) {
 			throw new MqttException(MqttException.REASON_CODE_CLIENT_DISCONNECTING);
 		}
